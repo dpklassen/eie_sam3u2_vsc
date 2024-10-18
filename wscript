@@ -130,7 +130,7 @@ def configure(ctx):
     jlink_name = "JLinkExe"
     jlink_ext = ""
     if Utils.is_win32:
-        jlink_name = "Jlink"
+        jlink_name = "JLink"
         jlink_ext = ".exe"
 
     # Find the Jlink tools. Not needed for much, just if you want to flash the firmware through waf
@@ -381,6 +381,8 @@ def get_jlink_srch_path(exe_name: str):
             "C:\\Program Files\\SEGGER\\",
             "C:\\Program Files (x86)\\SEGGER\\",
             "D:\\SEGGER\\",
+            # "C:\\Program Files\\SEGGER\\JLink_V798i",
+            # "C:\\Program Files (x86)\\SEGGER\\JLink_V610e",
         ]
 
     elif Utils.unversioned_sys_platform() == "darwin":
